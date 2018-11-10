@@ -1,0 +1,41 @@
+{
+  "name": "NavExercise",
+  "description": "Exercise for candidates to complete where they will build a responsive nav driven from json",
+  "version": "0.1.1",
+  "authors": [
+    "Wes Hatch <whatch@hugeinc.com>",
+    "Karl Stanton <kstanton@hugeinc.com>"
+  ],
+  "license": "© 2016 Huge. All Rights Reserved.",
+  "homepage": "https://github.com/hugeinc/NavExercise",
+  "bugs": {
+    "url": "https://github.com/hugeinc/NavExercise/issues"
+  },
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./bin/www & webpack-dev-server --inline --hot",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "html-webpack-plugin": "^3.2.0",
+    "morgan": "^1.9.1",
+    "webpack-cli": "^3.1.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^1.0.0",
+    "install": "^0.12.2",
+    "node-sass": "^4.9.3",
+    "npm": "^6.4.1",
+    "or": "^0.2.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.25.1",
+    "webpack-dev-server": "^3.1.9",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
