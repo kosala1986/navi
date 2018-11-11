@@ -28,7 +28,9 @@ body {
 			-webkit-transform: translate(-50%, -50%);
 			transform: translate(-50%, -50%);
 			margin: 0;
-			font: 18vmin/1 HUGEAvantGardeBold;
+			font-family:HUGEAvantGardeBold;
+			font-size: 120px;
+			line-height: 132px;
 			letter-spacing: -0.06em;
 			text-align: center;
 			color: $WHITE;
@@ -50,6 +52,8 @@ body {
 			display: none;
 		}
 		.main-desc {
+			font-size: 24px;
+			line-height: 36px;
 			text-align: justify;
 			text-align: left;
 		}
@@ -93,6 +97,8 @@ only screen and (max-width: 767px) {
 			}
 			.main-desc {
 				text-align: center;
+				font-size: 14px;
+				line-height: 24px;
 				p {
 					text-align: justify;
 					margin: 0px;
