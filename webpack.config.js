@@ -11,7 +11,12 @@ module.exports = {
     },
     watch: true,
     devtool: false,
-    performance: { hints: false },
+    performance: { 
+        hints: false 
+    },
+    stats: {
+        warnings: false
+    },
     devServer: {
         port: 8000,
         host: 'localhost',
