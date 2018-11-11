@@ -5,6 +5,38 @@
   <script type="text/javascript" src="./main.js"></script>
 </head>
 <body>
-<h1>Hello.</h1>
+  <div class="huge-topnav" id="myTopnav">
+    <a href="#home" class="active">Home</a>
+    <a href="#news">Work</a>
+    <a href="#contact">About</a>
+    <div class="dropdown">
+      <button class="dropbtn">Careers 
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div> 
+    <a href="#about">Ideas</a>
+    <a href="#about">News</a>
+    <a href="#event">Events</a>
+    <a href="#contact">Contacts</a>
+    <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+  </div>
+  <div class="huge-wrapper">
+
+  </div>
+  <script>
+  function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "huge-topnav") {
+          x.className += " responsive";
+      } else {
+          x.className = "huge-topnav";
+      }
+  }
+  </script>
 </body>
 </html>

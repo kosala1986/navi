@@ -1,19 +1,104 @@
 @import "fonts";
 @import "colors";
+@import "variables";
+@import "navibar";
+
 
 body {
-  background: $MAGENTA;
-  color: $WHITE;
+	margin: 0px;
+  height: 100%;
+  font-family: HUGEAvantGardeBold, sans-serif; 
 }
 
-h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  margin: 0;
-  font: 20vmin/1 HUGEAvantGardeBold;
-  letter-spacing: -0.06em;
-  text-align: center;
+.huge-wrapper {
+	display: flex;
+	flex-direction: column;
+  width: 100%;
+  
+	.main-image {
+		background-image: url('../../public/images/background-image.jpg');
+		min-height: $DESKTOP_IMAGE_HEGIHT;
+		background-repeat: no-repeat;
+    background-size: cover;
+    
+		.desktop-main-title {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			margin: 0;
+			font: 18vmin/1 HUGEAvantGardeBold;
+			letter-spacing: -0.06em;
+			text-align: center;
+			color: $WHITE;
+		}
+	}
+	.main-content {
+		display: flex;
+		flex-direction: column;
+		padding-left: 10%;
+		padding-right: 10%;
+		justify-content: center;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		font-size: 24px;
+		line-height: 36px;
+    font-family: Galaxie;
+    
+		.mobile-main-title {
+			display: none;
+		}
+		.main-desc {
+			text-align: justify;
+			text-align: left;
+		}
+	}
 }
+
+.mask {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none; 
+}
+  .mask.mask-show {
+    display: block; 
+  }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 767px),
+only screen and (max-width: 767px) {
+	.huge-wrapper {
+		.main-image {
+
+      min-height: $MOBILE_IMAGE_HEGIHT;
+
+			.desktop-main-title {
+				display: none;
+			}
+		}
+		.main-content {
+			.mobile-main-title {
+				padding-bottom: 50px;
+				margin: 0px;
+				display: block;
+				font-family: Galaxie;
+				font-size: 44px;
+				line-height: 48px;
+				text-align: center;
+			}
+			.main-desc {
+				text-align: center;
+				p {
+					text-align: justify;
+					margin: 0px;
+				}
+			}
+		}
+	}
+}
+

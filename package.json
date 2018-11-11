@@ -18,9 +18,11 @@
     "build": "webpack --mode production"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "html-webpack-plugin": "^3.2.0",
     "morgan": "^1.9.1",
+    "url-loader": "^1.1.2",
     "webpack-cli": "^3.1.1"
   },
   "devDependencies": {
@@ -28,6 +30,7 @@
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
     "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
     "install": "^0.12.2",
     "node-sass": "^4.9.3",
     "npm": "^6.4.1",

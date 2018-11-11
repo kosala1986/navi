@@ -1,12 +1,23 @@
 #!/usr/bin/env node
 var express = require('express');
+const cors = require('cors');
 var app = express();
+
+app.use(cors());
+app.options('*', cors());
 
 const api = require('../api/index');
 app.use('/api', api);
-const port = process.env.PORT || 3000;
+
+const port = process.env.PORT || 3400;
 app.set('port', port);
 
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 app.listen(port, function() {
-  console.log('HUGE NavExercise application is available at http://localhost:' + port);
+  console.log('HUGE node server running on http://localhost:' + port);
 });

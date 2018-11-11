@@ -15,6 +15,12 @@ module.exports = {
     devServer: {
         port: 8000,
         host: 'localhost',
+        publicPath: "/",
+        historyApiFallback: true,
+        hot: true,
+        publicPath: "/",
+        inline: true,
+        overlay: true,
 },
     plugins: [
         new HtmlWebpackPlugin({
@@ -45,7 +51,44 @@ module.exports = {
                 }, {
                     loader: "sass-loader"
                 }]
-            }
-        ]
+            },
+            {
+                test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+                loader: 'url-loader',
+                query: {
+                  limit: 10000,
+                  mimetype: 'application/font-woff'
+                }
+              },
+              {
+                test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+                loader: 'url-loader',
+                query: {
+                  limit: '10000',
+                  mimetype: 'application/octet-stream'
+                }
+              },
+              {
+                test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+                loader: 'file-loader'
+              },
+              {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'fonts/'
+                    }
+                }]
+            },
+              {
+                test: /\.(png|jpg)$/,
+                loader: 'url-loader',
+                query: {
+                  limit: 8192
+                }
+              }
+        ],
     }
 }

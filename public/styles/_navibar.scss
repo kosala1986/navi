@@ -1,0 +1,234 @@
+
+.huge-topnav {
+  overflow: hidden;
+  height: $DESKTOP_HEADER_HIGHT;
+  background-color: $MAGENTA;
+
+  a {
+    float: left;
+    display: block;
+    color: $WHITE;
+    text-align: center;
+    padding: 24px 24px;
+    text-decoration: none;
+    font-size: 21px;
+    font-family:HUGEAvantGardeBold;
+    line-height: 25px;
+  }
+
+  .icon {
+    display: none;
+    background-image: url("../../public/images/toggle-open.svg");
+    width: 24px;
+    height: 20px;
+    margin: 0px;
+    padding:20px 24px 20px 24px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+
+  .logo {
+    background-size: 100%;
+    background-image: url("../../public/images/HUGE-white.png");
+    width: 60px;
+    height: 24px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    padding: 24px 0px 24px 0px;
+    margin: 0 48px 0 24px;
+    display: inline-flex;
+    position: relative;
+    top: 0;
+    left: 0;
+
+  }
+
+ }
+
+
+
+ .active {
+  color: white;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    font-size: 21px;  
+    font-family: HUGEAvantGardeBold;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 24px 24px;
+    background-color: inherit;
+    margin: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: $WHITE;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    
+}
+
+.dropdown-content a {
+   font-family: Galaxie; 
+    float: none;
+    font-size: 16px;
+    color: $MAGENTA;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 12px;
+
+}
+
+.huge-topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: $WHITE;
+  color: $MAGENTA;
+}
+
+.dropdown-content a {
+  background-color: $WHITE;
+  color: $TRANSLUCENT_BLACK;
+}
+
+.huge-topnav .logo:hover {
+  background-color: transparent;
+  color: $WHITE;
+}
+
+.huge-topnav .dropdown-content a:hover {
+  background-color: $LIGHT_GRAY;
+  color: $MAGENTA;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 767px),
+only screen and  (max-width: 767px) {
+
+  .huge-wrapper {
+    top: 60px;
+    position: absolute;
+  }
+
+  .huge-topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+    background-color: $WHITE;
+    color: $TRANSLUCENT_BLACK;
+    
+
+  }
+
+  .huge-topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: $LIGHT_GRAY;
+    color: $TRANSLUCENT_BLACK;
+  }
+
+
+  .huge-topnav {
+   z-index: 1000;
+    height: inherit;
+
+    :first-child {
+      display: none;
+    }
+    &.responsive {
+
+      a:not(:first-child) {
+        margin-top: -3px;
+      }
+
+
+      height: inherit;
+      position: relative;
+
+      .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-image: url("../../public/images/toggle-close.svg");
+        width: 24px;
+        height: 20px;
+        margin: 0px;
+        padding:20px 24px 20px 24px;
+        margin-left: 48px;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        cursor: pointer;
+      }
+
+      .logo {
+        height: 12px;
+        width: 50px;
+        margin: 0 24px 0 24px;
+      }
+
+      a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+
+      .dropdown {
+        float: none;
+        margin-top: -1px;
+        .dropbtn {
+          display: block;
+          width: 100%;
+          text-align: left;
+          margin-top: -1px;
+
+      }
+
+  .dropbtn {
+    &:after {
+      content: ' \22C1';
+      float: right;
+      color:$MAGENTA;
+    }
+
+    &:hover{
+      
+      &:after{
+        content: ' \22C0';
+      }
+  }
+  
+}
+
+   
+      }
+      .dropdown-content {
+        position: relative;
+        margin-bottom: -1px;
+
+        .sub-link {
+          padding-left: 30px;
+        }
+      }
+    }
+  }
+
+  .huge-topnav {
+    a.icon {
+    float: left;
+    display: block;
+    background-color: $MAGENTA;
+    color: $WHITE;
+  }
+}
+
+}
