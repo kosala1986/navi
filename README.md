@@ -18,6 +18,8 @@ Here are the guidelines for this exercise, please follow closely:
 ```
 $ npm i && npm start
 ```
+* Project is running at **http://localhost:8000/**
+* Node server is running on **http://localhost:3400/**
 
 Nice to haves (things that we look for):
 
@@ -41,6 +43,7 @@ At a high level the navigation will have two main states:
 ## API
 
 * GET /api/nav.json - returns a JSON response representing the items in the nav.
+* Huge node server running on 3400 port. You can change the port on bin/www file
 
 ## Get Started
 
